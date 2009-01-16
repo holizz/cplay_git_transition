@@ -1,0 +1,16 @@
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.30
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.31
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.32
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.33.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.34.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.35.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.40.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.41-beta.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.41.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.42.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.43.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.44.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.45.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.46.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.47.tar.gz
+http://web.archive.org/web/20050310155712/www.tf.hut.fi/~flu/cplay/old/cplay-1.48.tar.gz
