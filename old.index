@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+ <head>
+<BASE HREF="http://www.tf.hut.fi.way_back_stub/~flu/cplay/old/">
+
+  <title>Index of /~flu/cplay/old</title>
+ </head>
+ <body>
+<h1>Index of /~flu/cplay/old</h1>
+<pre><img src="/icons/blank.gif" alt="Icon "> <a href="?C=N;O=D">Name</a>                    <a href="?C=M;O=A">Last modified</a>      <a href="?C=S;O=A">Size</a>  <a href="?C=D;O=A">Description</a><hr><img src="/icons/back.gif" alt="[DIR]"> <a href="/~flu/cplay/">Parent Directory</a>                             -   
+<img src="/icons/text.gif" alt="[TXT]"> <a href="cplay-1.30">cplay-1.30</a>              27-Jun-2000 11:36   39K  
+<img src="/icons/text.gif" alt="[TXT]"> <a href="cplay-1.31">cplay-1.31</a>              27-Jun-2000 11:40   39K  
+<img src="/icons/text.gif" alt="[TXT]"> <a href="cplay-1.32">cplay-1.32</a>              25-Jul-2000 14:23   41K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.33.tar.gz">cplay-1.33.tar.gz</a>       31-Jul-2000 16:50   13K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.34.tar.gz">cplay-1.34.tar.gz</a>       09-Aug-2000 17:45   13K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.35.tar.gz">cplay-1.35.tar.gz</a>       06-Sep-2000 10:32   13K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.40.tar.gz">cplay-1.40.tar.gz</a>       19-Oct-2000 13:09   14K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.41-beta.tar.gz">cplay-1.41-beta.tar.gz</a>  08-Dec-2000 11:31   15K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.41.tar.gz">cplay-1.41.tar.gz</a>       08-Dec-2000 15:06   15K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.42.tar.gz">cplay-1.42.tar.gz</a>       18-Jan-2001 14:20   15K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.43.tar.gz">cplay-1.43.tar.gz</a>       17-Mar-2001 11:34   15K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.44.tar.gz">cplay-1.44.tar.gz</a>       01-Dec-2001 16:44   17K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.45.tar.gz">cplay-1.45.tar.gz</a>       24-Mar-2002 23:20   17K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.46.tar.gz">cplay-1.46.tar.gz</a>       16-Dec-2002 16:04   27K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.47.tar.gz">cplay-1.47.tar.gz</a>       13-Apr-2003 20:25   30K  
+<img src="/icons/compressed.gif" alt="[CMP]"> <a href="cplay-1.48.tar.gz">cplay-1.48.tar.gz</a>       26-Aug-2003 15:13   35K  
+<hr></pre>
+<address>Apache/2.0.52 (Fedora) Server at www.tf.hut.fi Port 80</address>
+</body>
+<SCRIPT language="Javascript">
+<!--
+
+// FILE ARCHIVED ON 20050310155712 AND RETRIEVED FROM THE
+// INTERNET ARCHIVE ON 20090115221729.
+// JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+// ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+// SECTION 108(a)(3)).
+
+   var sWayBackCGI = "http://web.archive.org/web/20050310155712/";
+
+   function xResolveUrl(url) {
+      var image = new Image();
+      image.src = url;
+      return image.src;
+   }
+   function xLateUrl(aCollection, sProp) {
+      var i = 0;
+      for(i = 0; i < aCollection.length; i++) {
+         var url = aCollection[i][sProp];         if (typeof(url) == "string") { 
+          if (url.indexOf("mailto:") == -1 &&
+             url.indexOf("javascript:") == -1
+             && url.length > 0) {
+            if(url.indexOf("http") != 0) {
+                url = xResolveUrl(url);
+            }
+            url = url.replace('.way_back_stub','');
+            aCollection[i][sProp] = sWayBackCGI + url;
+         }
+         }
+      }
+   }
+
+   xLateUrl(document.getElementsByTagName("IMG"),"src");
+   xLateUrl(document.getElementsByTagName("A"),"href");
+   xLateUrl(document.getElementsByTagName("AREA"),"href");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"codebase");
+   xLateUrl(document.getElementsByTagName("OBJECT"),"data");
+   xLateUrl(document.getElementsByTagName("APPLET"),"codebase");
+   xLateUrl(document.getElementsByTagName("APPLET"),"archive");
+   xLateUrl(document.getElementsByTagName("EMBED"),"src");
+   xLateUrl(document.getElementsByTagName("BODY"),"background");
+   xLateUrl(document.getElementsByTagName("TD"),"background");
+   xLateUrl(document.getElementsByTagName("INPUT"),"src");
+   var forms = document.getElementsByTagName("FORM");
+   if (forms) {
+       var j = 0;
+       for (j = 0; j < forms.length; j++) {
+              f = forms[j];
+              if (typeof(f.action)  == "string") {
+                 if(typeof(f.method)  == "string") {
+                     if(typeof(f.method) != "post") {
+                        f.action = sWayBackCGI + f.action;
+                     }
+                  }
+              }
+        }
+    }
+
+
+//-->
+</SCRIPT>
+
+</html>
