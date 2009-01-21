@@ -2,6 +2,7 @@
 
 require 'time'
 require 'set'
+require 'changelog'
 
 def get_files(dates)
   open(dates).read.split("\n").map{|l|
@@ -21,6 +22,8 @@ def do_git(files)
   author = 'Ulf Betlehem'
   email = 'flu@iki.fi'
   dir='cplay_git'
+  `iconv -f ISO-8859-1 -t UTF-8 < pre/ChangeLog > pre/ChangeLog.utf8`
+  changelog = ChangeLog.new('pre/ChangeLog.utf8')
   `mkdir -p #{dir}`
   old_dir=Dir.pwd
   Dir.chdir(dir)
@@ -57,6 +60,14 @@ def do_git(files)
     else
       `cp ../#{file} cplay`
       `git add cplay`
+    end
+    # Add the ChangeLog
+    version = filename.match(/cplay-(.*)(\.tar\.gz)?/)[1]
+    if changelog.versions.include?(version)
+      open('ChangeLog','w+') {|f|
+        f.write(changelog.until(version))
+      }
+      `git add ChangeLog`
     end
     `GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -m '#{filename}'`
   }
