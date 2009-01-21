@@ -69,7 +69,9 @@ def do_git(files)
       }
       `git add ChangeLog`
     end
-    `GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -m '#{filename}'`
+    if version != '1.46pre1+tags' # special case - should be a branch
+      `GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -m '#{filename}'`
+    end
   }
   Dir.chdir(old_dir)
 end
