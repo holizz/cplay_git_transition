@@ -62,7 +62,7 @@ def do_git(files)
       `git add cplay`
     end
     # Add the ChangeLog
-    version = filename.match(/cplay-(.*)(\.tar\.gz)?/)[1]
+    version = filename.match(/cplay-(.*?)($|\.tar\.gz$)/)[1]
     if changelog.versions.include?(version) or version=='1.47rc1'
       open('ChangeLog','w+') {|f|
         if version == '1.47rc1'
