@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 require 'time'
+require 'set'
 
 def get_files(dates)
   open(dates).read.split("\n").map{|l|
@@ -30,8 +31,34 @@ def do_git(files)
   puts "hello"
   files.each{|date,file|
     puts "#{date} #{file}"
-    `cp ../#{file} cplay`
-    `GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -am '#{file[4..-1]}'`
+    filename = file.split('/')[-1]
+    if file.end_with? '.tar.gz'
+      dir = filename.dup
+      dir['.tar.gz']=''
+      `tar xzf ../#{file}`
+      `rm -rf #{dir}/CVS`
+      `rm -rf #{dir}/po/CVS`
+
+      newfiles = `find #{dir}`.split("\n").map{|f|
+        f.split('/')[1..-1].join('/')}.select{|f|f!=''}
+
+      `mv #{dir}/* .`
+      `mv #{dir}/po/* po/`
+      `rmdir #{dir}/po`
+      `rmdir #{dir}`
+      curfiles = `find .`.split("\n").map{|f|
+        f.split('/')[1..-1].join('/')}.select{|f|
+          not f.start_with? '.'}.select{|f|f!=''}
+
+      # Remove files not present in the latest tarball
+      (Set.new(curfiles) - Set.new(newfiles)).each{|f| `git rm #{f}`}
+
+      newfiles.each{|f| `git add #{f}`}
+    else
+      `cp ../#{file} cplay`
+      `git add cplay`
+    end
+    `GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -m '#{filename}'`
   }
   Dir.chdir(old_dir)
 end
