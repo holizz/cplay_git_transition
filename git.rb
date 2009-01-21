@@ -28,24 +28,24 @@ def do_git(files)
   `chmod 755 cplay`
   `git init`
   `git add cplay`
-  puts "hello"
   files.each{|date,file|
     puts "#{date} #{file}"
     filename = file.split('/')[-1]
     if file.end_with? '.tar.gz'
-      dir = filename.dup
-      dir['.tar.gz']=''
+      fdir = filename.dup
+      fdir['.tar.gz']=''
       `tar xzf ../#{file}`
-      `rm -rf #{dir}/CVS`
-      `rm -rf #{dir}/po/CVS`
+      `rm -rf #{fdir}/CVS`
+      `rm -rf #{fdir}/po/CVS`
 
-      newfiles = `find #{dir}`.split("\n").map{|f|
+      newfiles = `find #{fdir}`.split("\n").map{|f|
         f.split('/')[1..-1].join('/')}.select{|f|f!=''}
 
-      `mv #{dir}/* .`
-      `mv #{dir}/po/* po/`
-      `rmdir #{dir}/po`
-      `rmdir #{dir}`
+      `mkdir -p po`
+      `mv #{fdir}/po/* po/`
+      `rmdir #{fdir}/po`
+      `mv #{fdir}/* .`
+      `rmdir #{fdir}`
       curfiles = `find .`.split("\n").map{|f|
         f.split('/')[1..-1].join('/')}.select{|f|
           not f.start_with? '.'}.select{|f|f!=''}
