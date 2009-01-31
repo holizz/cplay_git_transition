@@ -65,14 +65,7 @@ def do_git(files)
     version = filename.match(/cplay-(.*?)($|\.tar\.gz$)/)[1]
     if changelog.versions.include?(version) or version=='1.47rc1'
       open('ChangeLog','w+') {|f|
-        if version == '1.47rc1'
-          cl = changelog.until('1.47rc2')
-          cl[0] = ([cl[0].split("\n")[0]] +
-                   cl[0].split("\n")[4..-1]).join("\n")+"\n"
-          f.write(cl)
-        else
-          f.write(changelog.until(version))
-        end
+        f.write(changelog.until(version))
       }
       `git add ChangeLog`
     end

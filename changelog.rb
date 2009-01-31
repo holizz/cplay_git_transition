@@ -23,7 +23,14 @@ class ChangeLog
     res
   end
   def until(version)
-    @log[versions[version]..-1]
+    if version == '1.47rc1'
+      cl = self.until('1.47rc2')
+      cl[0] = ([cl[0].split("\n")[0]] +
+               cl[0].split("\n")[4..-1]).join("\n")+"\n"
+      cl
+    else
+      @log[versions[version]..-1]
+    end
   end
 end
 
