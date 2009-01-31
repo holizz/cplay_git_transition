@@ -78,6 +78,7 @@ def do_git(files)
       IO.popen("GIT_AUTHOR_NAME='#{author}' GIT_AUTHOR_EMAIL='#{email}' GIT_AUTHOR_DATE='#{date}' git commit -F-",'w') {|io|
         io.write(msg)
       }
+      `git tag v#{version}`
     end
   }
   Dir.chdir(old_dir)
