@@ -7,6 +7,11 @@ class ChangeLog
     @log = []
     file.split("\n").each{|line|
       if line =~ /^\d{4}-\d{2}-\d{2}  /
+        if @log.length>0 and @log[-1].end_with?("\t\n")
+          # "a\n\n\n".split("\n") === ['a']
+          # therefore only this needs to be done manually
+          @log[-1] = @log[-1][0..-3]
+        end
         @log << ""
       end
       @log[-1] << line+"\n"
